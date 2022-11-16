@@ -1,0 +1,93 @@
+.app_name {
+    color: white;
+    padding: 1.2rem 2.5rem;
+    
+    background: rgba(255, 254, 254, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+  
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(189, 189, 189); */
+  
+    text-shadow: 3px 3px 3px #707070;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+  
+.algo_btn {
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    font-size: 1.1rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    margin: 1.2rem;
+    color: white;
+  
+    background: rgba(255, 254, 254, 0.22);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.1px);
+    -webkit-backdrop-filter: blur(4.1px);
+}
+  
+.algo_btn:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.algo_btn:hover {
+    color: white;
+    font-weight: bolder;
+}
+  
+/* .algo_btn:active {
+    font-weight: bolder;
+} */
+  
+  /* .algo_btn:active:after {
+    background: transparent;
+  } */
+  
+.algo_btn:hover:before {
+    opacity: 1;
+}
+  
+.algo_btn:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+  
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.nav_active {
+    font-weight: bolder;
+    outline: 4px solid white;
+}
